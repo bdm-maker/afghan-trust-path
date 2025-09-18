@@ -3,27 +3,63 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header {
-  background-color: #0d1b2a;
-  color: white;
-  padding: 15px 30px;
-}
-
-header nav {
+/* Header / Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 50px;
+  background-color: white; /* clean white background */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
 }
 
-header nav ul {
+.navbar .logo img {
+  height: 50px;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
-header nav ul li a {
-  color: white;
+.nav-links li a {
   text-decoration: none;
+  color: #0d1b2a;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #0d1b2a;
+  transition: all 0.3s ease;
+}
+
+/* Sticky animation on scroll */
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  padding: 10px 50px;
 }
 
 .hero {
